@@ -20,6 +20,8 @@ h1 {
 h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
+    font-weight: bolder;
+    color: #fff;
 }
 
 p {
@@ -53,6 +55,16 @@ p {
     width: 30rem;
     text-align: center;
     margin-bottom: 1rem;
-    color: red;
-    background: green;
+    color: rgb(199, 98, 115);
+    background: rgb(2, 2, 2);
+}
+
+.btn:hover {
+    cursor: crosshair;
+}
+
+#quiz {
+    margin: 0 auto;
+    padding: 25%;
+    font-size: 50px;
 }
