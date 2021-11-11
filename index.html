@@ -5,49 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Quiz game</title>
 </head>
 
 <body>
-    <form name="quiz" id="quiz">
-        <div>
-            <p>1. Which of the following is Swedens capital city?</p>
-            <p><input type="radio" name="q1" value="gothenburg">Gothenburg</p>
-            <p><input type="radio" name="q1" value="stockholm">Stockholm</p>
-            <p><input type="radio" name="q1" value="malmo">Malmö</p>
+    <div class="container">
+        <div id="home" class="flex-column flex-center">
+            <h1>Let's play a game</h1>
+            <a href="/quiz.html" id="play-btn" class="btn">Play<i class="far fa-play-circle"></i>
+            </a>
         </div>
-        <div>
-            <p>2. Sweden is known as the fifth largest country in Europe, how many approximately lives in Sweden? </p>
-            <p><input type="radio" name="q2" value="9m">9 million</p>
-            <p><input type="radio" name="q2" value="10.5m">10.5 million</p>
-            <p><input type="radio" name="q2" value="11m">11 million</p>
-        </div>
-        <div>
-            <p>3. A common perception of sweden is that all you see is forrest, how many procent of Swedens surface is
-                covered by forrest? </p>
-            <p><input type="radio" name="q3" value="80p">80 percent</p>
-            <p><input type="radio" name="q3" value="70p">70 percent</p>
-            <p><input type="radio" name="q3" value="75p">75 percent</p>
-        </div>
-        <div>
-            <p>4. Swedes love their "fika", what's the meaning behind the concept?</p>
-            <p><input type="radio" name="q4" value="coffee1">A coffee and conversation with a friend</p>
-            <p><input type="radio" name="q4" value="coffee2">A coffee with a sweet on the side</p>
-            <p><input type="radio" name="q4" value="coffee3">A coffee with sugar</p>
-        </div>
-        <div>
-            <p>5. Swedes have long been known for social distancing, how many procent of sweden is uninhabited?</p>
-            <p><input type="radio" name="q5" value="">74 percent</p>
-            <p><input type="radio" name="q5" value="">82 percent</p>
-            <p><input type="radio" name="q5" value="">97 percent</p>
-        </div>
-
-        <input type="button" name="" value="Let's check my knowledge!" onclick="check()">
-    </form>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
