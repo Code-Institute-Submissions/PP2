@@ -12,4 +12,6 @@ function check() {
     if (q5 == "97p")(c++)
 
     document.write(c);
+
+
 }
