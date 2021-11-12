@@ -57,6 +57,7 @@ p {
     margin-bottom: 1rem;
     color: rgb(199, 98, 115);
     background: rgb(2, 2, 2);
+    border-radius: 15px;
 }
 
 .btn:hover {
@@ -70,9 +71,12 @@ p {
 }
 
 #results {
-    display: none;
+    display: flex;
+    font-size: 50px;
+    padding: 25%;
 }
 
 #score {
+    display: flex;
     font-size: 50px;
 }
