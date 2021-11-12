@@ -68,3 +68,11 @@ p {
     padding: 25%;
     font-size: 50px;
 }
+
+#results {
+    display: none;
+}
+
+#score {
+    font-size: 50px;
+}
