@@ -4,9 +4,9 @@ const score = document.querySelector('#score');
 
 let currrentQuestion = {};
 let acceptingAnswers = true;
-let score = 0;
+// let score = 0;
 let questionCounter = 0;
-let availableQuestions = {}
+let availableQuestions = {};
 
 let questions = [{
     question: 'Which of the following is the capital city of Sweden?',
@@ -38,19 +38,19 @@ let questions = [{
     choice2: '82 percent',
     choice3: '97 percent',
     answer: 3,
-}]
+}];
 
-const SCORE_POINTS = 10
-const MAX_QUESTIONS = 4
+const SCORE_POINTS = 10;
+const MAX_QUESTIONS = 4;
 
 startGame = () => {
-    questionCounter = 0
+    questionCounter = 0;
     score = 0
-    availableQuestions = (...questions)
-    getNewQuestion()
+    availableQuestions = [...questions];
+    getNewQuestion();
 }
 getNewQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTION) {
+    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('end.html')
@@ -59,24 +59,24 @@ getNewQuestion = () => {
     questionCounter++
     progressText.innerText = 'question ${questionCounter} of ${MAX_QUESTION}'
 
-    const questionIndex = Math.floor(Math.random() = availableQuestions.length)
-    currrentQuestion = availableQuestions(questionIndex)
-    question.innerText = currentQuestion.question
+    const questionIndex = Math.floor(Math.random() = availableQuestions.length);
+    currrentQuestion = availableQuestions(questionIndex);
+    question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
-        const number = choice.dataset('number')
-        choice.innerText = currentQuestion('choice' + number)
+        const number = choice.dataset('number');
+        choice.innerText = currentQuestion('choice' + number);
     })
-    availableQuestions.splice(questionsIndex, 1)
-    acceptingAnswers = true
+    availableQuestions.splice(questionsIndex, 1);
+    acceptingAnswers = true;
 }
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
-        acceptingAnswers = false
-        const selectedChoice = e.target
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
@@ -84,11 +84,17 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        selectedChoice.parentElement.classList.add(classToApply)
 
 
     })
 })
+incrementScore = num => {
+    score + -num
+    scoreText.innerText = score
+}
 
+startGame()
 
 
 
